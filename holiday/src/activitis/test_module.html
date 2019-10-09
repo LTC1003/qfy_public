@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #myapp{
+            background: #b93;
+        }
+        #player{
+            width: 300px;
+            height: 200px;
+            border:1px solid #c59;
+            /* display:none; */
+        }
+    </style>
+    <title>方案测试</title>
+</head>
+<body>
+    <div id="myapp">
+        <div class="audio">
+            <!-- <audio id="player" src="../media/殷秀梅 - 我和我的祖国.mp3">
+                audio palyer not available.
+            </audio> -->
+            <audio id="player" controls="controls" autoplay="autoplay">
+                <source src="../media/我和我的祖国.mp3" type="audio/mpeg">
+                你的浏览器不支持audio标签
+            </audio>
+        </div>
+        <div class="controls">
+            <input type="button" value="Play" id="audio-btn">
+            <span id="curtime">0</span> / <span id="duration">0</span>
+        </div>
+    </div>
+    <script>
+        (function(){
+            viewHW();
+            audioAutoPlay();
+        })()
+        
+        function viewHW(viewH,viewW){   
+            var vh = document.documentElement.scrollHeight;
+            var vw = document.documentElement.scrollWidth;
+            viewH = document.getElementById("myapp").style.height = vh + "px";
+            viewW = document.getElementById("myapp").style.width = vw + "px";
+        }
+
+        function audioAutoPlay(){
+            // 取得元素的yinyong
+            var player = document.getElementById('player'),
+            btn = document.getElementById('audio-btn'),
+            curtime = document.getElementById('curtime'),
+            duration = document.getElementById('duration'),
+            parentId = document.getElementById('myapp');
+
+            // 更新播放时间
+            duration.innerHTML = player.duration;
+
+            /*
+            * 判断audio是否暂停
+            * 音量、结束时长、状态：audio.volume, audio.played, audio.readyState
+            * play() error from 33line: Uncaught (in promise) DOMException
+            */
+            // document.ontouchend = function() {
+            //     if(player.paused){
+            //         player.play();
+            //     } else{
+            //         player.pause();
+            //     }
+            // }
+
+            // 为按钮添加事件处理程序
+            document.addEventListener("click", function(){
+                console.log(this, player);
+                if(player.paused){
+                    palyer.play();
+                    console.log(btn.value,"btnclick444");
+                    btn.value = "Pause";
+                    console.log(btn.value,"btnclick555");
+                } else{
+                    player.pause();
+                    btn.value = "Play";
+                }
+            }, false);
+
+        }
+    
+    </script>
+</body>
+</html>

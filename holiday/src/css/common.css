@@ -1,0 +1,138 @@
+body{
+    font-family: "Microsoft YaHei" !important;
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+table,tr,th,td,p,div,span{
+    margin:0;
+    padding:0;
+}
+/* reset style-btn*/
+button{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid transparent; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+    margin:0;
+    padding:0;
+    border:none;
+}
+ul,li,ol,li{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+/*(400*850)iph-plus(414*736) iphX(375*812) iphone6-7-8(375*667) iphone5-se(320*568) galaxy-s5(360*640)*/
+@media screen{
+    html{
+        font-size: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:768px) and (max-width: 979px){
+    html{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:767px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:480px){
+    html{
+        font-size: 12px;
+    }
+}
+
+#tv-app{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.mian-module{
+    height: 100%;
+    width: 100%;
+    background: url("../imgs/电视机.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 0;
+}
+.werp-mian{
+    width: 90%;
+    height: 88%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -56%);
+    z-index: -1;
+}
+/* .xuhua1{
+    background: url("../imgs/start/雪花屏1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.xuhua2{
+    background: url("../imgs/start/雪花屏2.png") no-repeat center;
+    background-size: 100% 100%;
+} */
+
+.btn-next{
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+    width: 60%;
+    height: 10%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    /* justify-items: center; */
+    align-content: center;
+    
+}
+.btn-next img:hover{
+    cursor: pointer;
+}
+.switch{
+    position: absolute;
+    bottom: 1.5%;
+    right: 3%;
+    width: 6%;
+    height: 7%;
+    cursor: pointer;
+}
+/* 开关默认是open */
+.switch-no{
+    background: url("../imgs/声音开状态.png") no-repeat center;
+    background-size: 100% 100%; 
+}
+/* 开关默认是off */
+.switch-off{
+    background: url("../imgs/声音关状态.png") no-repeat center;
+    background-size: 100% 100%; 
+}

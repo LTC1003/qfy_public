@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style2009.css">
+    <title>years 2009</title>
+</head>
+<body>
+    <div id="tv-app">
+        <div class="mian-module"></div>
+        <div class="werp-mian">
+            <!-- bg擦拭出现，城市炫目出现，手机直播炫目出现，播放播放影片（无声），Wz由左往右出现 -->
+            <!-- wz -->
+            <div class="time-wz"></div>
+            <!-- 城市群 -->
+            <div class="cities"></div>
+            <!-- 手机直播 -->
+            <div class="live-phone">
+                <div>
+                    <video id="video2" src="../media/fromPhone.mp4" width="100%" height="100%" loop>
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="btn-next">
+            <button class="btn-before"></button>
+            <button class="btn-after"></button>
+        </div>
+        <div class="switch switch-no"></div>
+    </div>
+    <script src="../js/plugins/jquery-2.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+        (function(){
+            autoMoviePlay();
+        })();
+        /***
+         * 自动播放无声电影
+         * ****/ 
+        function autoMoviePlay(){
+            // 事件处理方法
+            function movieHandler(){
+                moviePlayer(true);
+            }
+            // 事件处理程序 冒泡
+            document.addEventListener("click", movieHandler,false);
+        }
+        // 播放方法
+        function moviePlayer(isPlay){
+            var media = document.getElementById("video2");
+            if(isPlay && media.paused){
+                media.play();
+            }
+            if(!isPlay && !media.paused){
+                media.pause();
+            }
+        }
+    </script>
+</body>
+</html>

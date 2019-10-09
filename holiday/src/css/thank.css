@@ -1,0 +1,84 @@
+.werp-mian{
+    background: url(../imgs/thank/祝福祖国2_bg@2x.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-next>button{
+    display: inline-block;
+    width: 36%;
+    height: 60%;
+}
+.btn-before{
+    background: url(../imgs/返回按下.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-before:hover, .btn-before:visited{
+    background: url(../imgs/返回按钮@2x.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-after{
+    background: url(../imgs/继续按下.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-after:hover, .btn-after:visited{
+    background: url(../imgs/继续按钮@2x.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.dazz{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 87%;
+    height: 37%;
+    background: url(../imgs/thank/光效@2x.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.gqj-text{
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    width: 8%;
+    height: 14%;
+    transform: translate(-50%, -50%);
+    background: url(../imgs/thank/国庆节@2x.png)no-repeat center;
+    background-size: 100% 100%;
+    z-index: 5;
+}
+.datetime{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 50%;
+    height: 6%;
+    transform: translate(-50%, -50%);
+    background: url(../imgs/thank/wz2@2x.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.testWz{
+    position: absolute;
+    top: 41%;
+    left: 35%;
+    width: 30%;
+    height: 25%;
+    background: url(../imgs/thank/祝福祖国2_wz@2x.png)no-repeat center;
+    background-size: 100% 100%;
+    /* animation: degs 1s linear; */
+}
+.tambg{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 31.5%;
+    background: url(../imgs/thank/天安门.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.jydlog{
+    position: absolute;
+    bottom: 2.5%;
+    left: 41%;
+    width: 17.5%;
+    height: 4%;
+    /* transform: translate(-50%, -50%); */
+    background: url(../imgs/blesse/logo@2x.png)no-repeat center;
+    background-size: 100% 100%;
+}

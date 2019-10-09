@@ -1,0 +1,128 @@
+.werp-mian{
+    background: url(../imgs/years2009/2009_bg@2x.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-next>button{
+    display: inline-block;
+    width: 36%;
+    height: 60%;
+}
+.btn-before{
+    background: url(../imgs/10年前.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-before:hover, .btn-before:visited{
+    background: url(../imgs/10年前_按下.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-after{
+    background: url(../imgs/10年后.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.btn-after:hover, .btn-after:visited{
+    background: url(../imgs/10年后_按下.png)no-repeat center;
+    background-size: 100% 100%;
+}
+.time-wz{
+    position: absolute;
+    top: 4%;
+    left: 8%;
+    z-index: 5;
+    width: 70%;
+    height: 15%;
+    background: url(../imgs/years2009/2100@2x.png)no-repeat center;
+    background-size: 100% 100%;
+    animation: degs 1s linear;
+}
+.cities{
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    width: 99%;
+    height: 30%;
+    background: url(../imgs/years2009/城市群.png)no-repeat center;
+    background-size: 100% 100%;
+    /* animation: rises 2s linear; */
+}
+.live-phone{
+    position: absolute;
+    top: 27%;
+    left: 0%;
+    width: 100%;
+    height: 48%;
+    background: url(../imgs/years2009/手机直播.png)no-repeat center;
+    background-size: 100% 100%;
+    z-index: 1;
+    /* animation: visits 2s 2s linear; */
+}
+.live-phone>div{
+    position: relative;
+    top: 26%;
+    left: 25%;
+    width: 51%;
+    height: 33%;
+    transform: skew(-2deg);
+}
+/* 垂直上升 */
+@keyframes rises{
+    from{
+        transform: translate(0%, 200%);
+
+        opacity: 0.5;
+    }
+    to{
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+/* 渐渐初现 */
+@keyframes walks{
+    from{
+        transform: scale(0.1,0.1);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
+/* 左至右旋转90度 */
+@keyframes degs{
+    10%{
+        transform: translate(-70%, 0%) rotate(-90deg);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translate(-5%, 0%) rotate(0deg);
+        opacity: 1;
+    }
+}
+/* 左至右擦拭 */
+@keyframes wipe{
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+/* 旋转放大 */
+@keyframes scaling{
+    from{
+        transform:rotate(0turn) scale(0.5,0.5);
+        transform-origin: 50% 50%;
+
+    }
+    to{
+        transform: rotate(2turn) scale(1,1);
+        transform-origin: 50% 50%;
+    }
+}
+@keyframes visits{
+    from{
+        transform: translate(50%, -50%) scale(0.2,0.2);
+        opacity: 0.5;
+    }
+    to{
+        transform: translate(0%, 0%) scale(1,1);
+        opacity: 1;
+    }
+}

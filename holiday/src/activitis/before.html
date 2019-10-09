@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/blesse.css">
+    <title>before</title>
+</head>
+<body>
+    <!-- 祝福祖国 -->
+    <div id="tv-app">
+        <div class="mian-module"></div>
+        <div class="werp-mian">
+            <!-- bg炫目出现，视频背景炫目出现，视频播放，logo从左至右出现，黑款从左至右出现，wz从上至下出现 -->
+            <div class="videobg">
+                <video id="video3">
+                    <source src="../media/congratulant.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="future">
+                <div class="future-text"></div>
+            </div>
+            <div class="jydlog"></div>
+        </div>
+        <div class="btn-next">
+            <button class="btn-before"></button>
+            <button class="btn-after"></button>
+        </div>
+        <div class="switch switch-no"></div>
+    </div>
+    <script src="../js/plugins/jquery-2.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script >
+    
+    // var myVideo=document.getElementById("video1");
+
+    //     function playPause(){ 
+    //     if (myVideo.paused) 
+    //         myVideo.play(); 
+    //     else 
+    //         myVideo.pause(); 
+    //     } 
+
+    //     function makeBig(){ 
+    //         myVideo.width=560; 
+    //     } 
+
+    //     function makeSmall(){ 
+    //         myVideo.width=320; 
+    //     } 
+
+    //     function makeNormal(){ 
+    //         myVideo.width=420; 
+    //     }
+
+
+        (function(){
+            autoMoviePlay();
+        })();
+        /***
+         * 自动播放无声电影
+         * ****/ 
+        function autoMoviePlay(){
+            // 事件处理方法
+            function movieHandler(){
+                moviePlayer(true);
+            }
+            // 事件处理程序 冒泡
+            document.addEventListener("click", movieHandler,false);
+        }
+        // 播放方法
+        function moviePlayer(isPlay){
+            var media = document.getElementById("video3");
+            if(isPlay && media.paused){
+                media.play();
+            }
+            if(!isPlay && !media.paused){
+                media.pause();
+            }
+        }
+    </script>
+</body>
+</html>

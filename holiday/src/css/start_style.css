@@ -1,0 +1,217 @@
+.werp-mian{
+    background: url(../imgs/start/bg@2x.png)no-repeat center;
+    background-size: 100% 100%;
+    animation: startbg 1s;
+    -moz-animation: startbg 1s;
+    -webkit-animation: startbg 1s;
+}
+.btn-last{
+    width: 36%;
+    height: 60%;
+    background: url(../imgs/开始探索.png)no-repeat center;
+    background-size: 100% 100%;
+}
+/* 开机前一秒的雪花 */
+@keyframes startbg
+{
+    0% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    10% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    20% {
+        background: url("../imgs/start/bg@2x.png")no-repeat center;
+        background-size: 100% 100%;
+        opacity: 0.3;
+    }
+    33% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    50% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    60% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    70% {
+        background: url("../imgs/start/bg@2x.png")no-repeat center;
+        background-size: 100% 100%;
+        opacity: 0.3;
+    }
+    80% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    100% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+}
+
+ @-moz-keyframes startbg /*Firefox */
+{
+    0% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    10% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    20% {
+        background: url("../imgs/start/bg@2x.png")no-repeat center;
+        background-size: 100% 100%;
+        opacity: 0.3;
+    }
+    30% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    25% {
+        background: url("../imgs/start/bg@2x.png")no-repeat center;
+        background-size: 100% 100%;
+        opacity: 0.3;
+    }
+    40% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    60% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    80% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    100% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes startbg /* Safari 和 Chrome */
+{
+    0% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    10% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    20% {
+        background: url("../imgs/start/bg@2x.png")no-repeat center;
+        background-size: 100% 100%;
+        opacity: 0.3;
+    }
+    30% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    38% {
+        background: url("../imgs/start/bg@2x.png")no-repeat center;
+        background-size: 100% 100%;
+        opacity: 0.3;
+    }
+    50% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    60% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    80% {background: url("../imgs/start/雪花屏2.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+    100% {background: url("../imgs/start/雪花屏1.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+}
+
+/* 直线移动旋转 */
+@keyframes ratates {
+    from{
+        transform: translate(-90%, 28%) rotate(0deg);
+    }
+    to{
+        transform: translate(12%, 28%) rotate(1440deg);
+    }
+}
+/* 直线上升 */
+@keyframes rises{
+    from{
+        transform: translate(-50%, 300%);
+        opacity: 0.5;
+    }
+    to{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+/* 左至右擦拭 */
+@keyframes wipe{
+    0%{
+        transform: translate(-200%, -50%) rotate(0deg);
+        opacity: 0.3;
+    }
+
+    30%{
+        transform: translate(-160%, -60%) rotate(15deg);
+        opacity: 0.9;
+        animation-timing-function: linear;
+    }
+    40%, 60%, to{
+        /* transform: translate(-70%, -50%); */
+        transform: translate(-120%, -50%) rotateZ(-15deg);
+        opacity: 0.5;
+        animation-timing-function: ease-out;
+        /* transition-timing-function: ease-out; */
+    }
+    70%{
+        transform: translate(-80%, -40%) rotate(15deg);
+        opacity: 0.7;
+        animation-timing-function: linear;
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+        animation-timing-function: linear;
+    }
+}
+@keyframes walks{
+    from{
+        transform: translate(-500%, -50%);
+        opacity: 0.5;
+    }
+    to{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+.stamps{
+    width: 80%;
+    height:25%;
+    position: absolute;
+    /* top:7%;
+    left: 10%; */
+    transform: translate(12.5%, 28%);
+    animation: ratates 5s linear;
+
+}
+.timeTab{
+    width: 38%;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: wipe 5s ease-out;
+}
+.flag{
+    width: 50%;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rises 5s ease-in;
+}
+.cplog{
+    width: 10%;
+    position: absolute;
+    top: 90%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    animation: walks 3s ease-out;
+}
+#bg-music{
+    display:none; 
+    height: 0;
+}
